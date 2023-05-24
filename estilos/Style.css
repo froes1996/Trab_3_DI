@@ -194,24 +194,6 @@ input{
   color: rgb(255, 255, 255);
 }
 
-.aereo{
-  width: clamp(200px, 60vw,600px);
-  height: clamp(50px, 35vw,300px);
-}
-
-.nautico{
-  width: clamp(200px, 60vw,600px);
-  height: clamp(50px, 35vw,300px);
-}
-.rodoviario{
-  width: clamp(100px, 60vw,600px);
-  height: clamp(50px, 35vw,300px);
-}
-.ferroviario{
-  width: clamp(100px, 60vw,600px);
-  height: clamp(50px, 35vw,300px);
-}
-
 .paga04 div{
   display: flex;
     flex-direction: row; 
@@ -223,7 +205,6 @@ video{
   width: 95vw;
   height: clamp(10px, 50vw,100vw);
 }
-
 .animation{
   width: 400px;
   height: 300px;
@@ -250,27 +231,27 @@ video{
     width: 45vw;
     height: 35vh;
   }
+  .page01 h1{
+    font-size: 18px;
+  }
 }
 /* ----------------------------- FOOTER ------------------------------------------------------*/
 footer{
     display: flex;
     justify-content: space-evenly;
-    flex-direction: row;  
-    align-items: end;    
+    flex-direction: column;  
+    align-items: center;    
     width: 100vw;
     height: clamp(90px, 20vw,200px);          
-    margin: auto;
     background: rgb(167,215,213);
     background: linear-gradient(360deg, rgba(167,215,213,1) 0%, rgba(255,255,255,1) 100%);
   }
   
-  .soc figure{
-    width: 3vw;
-    height: 3vw;
-    display: flex;
-    padding: 5px;
-    
+ footer .social img {
+    width: 20px;
+    height: 20px;
   }
+
    section{
     padding-top: 30px;
     display: flex;
@@ -280,11 +261,10 @@ footer{
     gap: 0.5vw;   
   } 
 
-  section b{
-    font-size: clamp(2px, 1vw,30px);
-  } 
-  section .social{
-    display: flex;
-    flex-direction: row;
+@media(max-width:768px){
+  footer b{
+    font-size: 10px;
   }
+}
+
   /* --------------------------------------------------------------------------------*/

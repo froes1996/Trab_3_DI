@@ -113,6 +113,9 @@ header{
     "img-cadastro"
     "formulario";
   }
+  .body-principal h1{
+    font-size: 15px;
+  }
 }
 
 .imglogin, .img-cadastro{

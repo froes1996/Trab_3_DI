@@ -1,0 +1,285 @@
+@import "reset.css";
+/* -------------------------------Fontes --------------------------*/
+a{
+  text-decoration: none;
+  color: #f35916;
+}
+h1{
+  padding-top: 20px;
+    padding-bottom: 20px;
+    font-size: clamp(12px, 30px,50px);
+    color: #f35916;
+}
+  
+/* ---------------------------   HEADER ------------------------------------*/
+header{
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: row;  
+  align-items: center;    
+  width: 95vw;
+  height: clamp(90px, 20vw,200px);          
+  margin: auto;
+  background: rgb(167,215,213);
+  background: linear-gradient(180deg, rgba(167,215,213,1) 0%, rgba(255,255,255,1) 100%);  
+  }
+.logo{
+  width: 10vw;
+  height: 10vw;
+}
+@media only screen and (max-width: 1000px) {
+  .logo {
+    width: 12vw;
+  }
+
+  header {
+    height: 12vw;
+  }
+
+  @media only screen and (min-width: 600px) {
+    .logo {
+      width: 10vw;
+    }
+
+    header {
+      height: 10vw;
+    }
+  }
+}
+  nav{  
+    font-size: clamp(10px,2vw,50px);
+    width:40vw;
+    height: clamp(35px, 6vw, 90px);
+    box-shadow: 0.4vw 0.4vw 0.4vw #edb789;    
+    background-color: rgb(216, 240, 239); 
+    box-shadow:0.4vw 0.4vw 0.4vw #f35916;
+    
+  }
+  nav ul{
+    display: flex;
+    align-items: center;   
+}
+  nav ul li{
+    text-decoration: none;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;   
+    width: clamp(25px,20vw,200px);
+    height: clamp(35px, 6vw, 90px);
+    color: rgb(13, 68, 68);
+  }
+  nav li a:hover{
+    background-color: #f5923b;   
+    font-weight: 400;
+    color: antiquewhite;
+  }
+/*  -------------------------------------------SECTION----------------------------------------------------------------*/
+
+.page01{
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.page01 h1{
+  font-size: clamp(12px, 30px,50px);
+  text-align: center;
+  color: black;
+}
+
+.image-page01{
+  width: 100%;
+  height: 100vh;
+  position: absolute;
+  z-index: -1;
+}
+.conteudo{
+  height: 100vh;
+display: grid;  
+grid-template-columns: 50% 50%;
+  grid-template-areas:
+  "img-cadastro formulario";
+}
+
+@media(max-width:768px){
+  .conteudo{
+    grid-template-columns: 100%;
+    grid-template-areas:
+    "img-cadastro"
+    "formulario";
+  }
+}
+@keyframes anima{
+  0%{
+    transform: scale(1);
+  }
+  100%{
+    transform: scale(1.05);
+  }
+}
+.page01 a:hover{
+  animation: anima;
+
+}
+
+.imglogin, .img-cadastro{
+  grid-area: img-cadastro;
+  
+}
+
+.imglogin img, .img-cadastro img{
+  width: 50%;
+ height: 100vh;
+ position: fixed;
+}
+@media(max-width:768px){
+  .imglogin img, .img-cadastro img{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    align-content: center;
+  };
+}
+.formulario{
+  grid-area: formulario;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(180deg, rgba(167,215,213,1) 0%, rgba(255,255,255,1) 100%);   
+
+}
+
+
+.h1-formulario{
+  padding: 0;
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
+
+@media(max-width:768px){
+  .formulario{
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+  }
+  .formulario h1{
+    margin-bottom: 20px;
+  }
+}
+
+fieldset{
+  font-size: 20px;
+  color: #f35916;
+  display: flex; 
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+input{
+  background-color: none;
+  border: 0.1px solid #f35916;
+  border-radius: 4px;
+  width: 30vw;
+  height: 22px;
+  margin-top: 10px;
+}
+@media(max-width:768px){
+  input{
+    width: 60vw;
+  }
+}
+
+.botao{
+  color: #f35916;
+
+}
+.botao a:hover{
+
+  background-color: #ff8000;   
+  font-weight: 400;
+  color: rgb(255, 255, 255);
+}
+
+.aereo{
+  width: clamp(200px, 60vw,600px);
+  height: clamp(50px, 35vw,300px);
+}
+
+.nautico{
+  width: clamp(200px, 60vw,600px);
+  height: clamp(50px, 35vw,300px);
+}
+.rodoviario{
+  width: clamp(100px, 60vw,600px);
+  height: clamp(50px, 35vw,300px);
+}
+.ferroviario{
+  width: clamp(100px, 60vw,600px);
+  height: clamp(50px, 35vw,300px);
+}
+
+.paga04 div{
+  display: flex;
+    flex-direction: row; 
+    flex-wrap: wrap; 
+    justify-content: space-evenly;
+    align-items: center; 
+}
+video{
+  width: 95vw;
+  height: clamp(10px, 50vw,100vw);
+}
+
+
+
+/* ----------------------------- FOOTER ------------------------------------------------------*/
+footer{
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: row;  
+    align-items: end;    
+    width: 100vw;
+    height: clamp(90px, 20vw,200px);          
+    margin: auto;
+    background: rgb(167,215,213);
+    background: linear-gradient(360deg, rgba(167,215,213,1) 0%, rgba(255,255,255,1) 100%);
+  }
+  
+  .soc figure{
+    width: 3vw;
+    height: 3vw;
+    display: flex;
+    padding: 5px;
+  
+  }
+   section{
+    padding-top: 30px;
+    display: flex;
+    flex-direction: column;  
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 0.5vw;   
+  } */
+   section div{
+  
+    display: flex;
+    flex-direction: row; 
+    flex-wrap: wrap; 
+    justify-content: space-evenly;
+    align-items: center; 
+    gap: 10vw;
+  } */
+  section b{
+    font-size: clamp(2px, 1vw,30px);
+    white-space: nowrap;
+  } 
+  section .social{
+    display: flex;
+    flex-direction: row;
+  }
+  /* --------------------------------------------------------------------------------*/
